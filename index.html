@@ -1,94 +1,108 @@
+
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
-<head>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Akshay K Ramkumar</title>
+    <meta name="description" content="Personal blog">
+    <meta name="author" content="AkR">
 
-	<!-- Basic Page Needs
-  ================================================== -->
-	<meta charset="utf-8">
-	<meta name="description" content="Random ideas and possibly working code.">
-	<title>AkR's Blog/Website</title>
-	<meta name="author" content="Akshay K Ramkumar">
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-	<!-- Mobile Specific Metas
-  ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
+    <style type="text/css">
+      /* Override some defaults */
+      html, body {
+        background-color: #eee;
+      }
+      body {
+        padding-top: 40px;
+      }
+      .container > footer p {
+        text-align: center; 
+      }
+      .container {
+        width: 820px;
+      }
 
-	<!-- CSS
-  ================================================== -->
-	<link rel="stylesheet" href="stylesheets/base.css">
-	<link rel="stylesheet" href="stylesheets/skeleton.css">
-	<link rel="stylesheet" href="stylesheets/layout.css">
+      .content {
+        background-color: #fff;
+        padding: 20px;
+        margin: 0 -20px;
+        -webkit-border-radius: 0 0 6px 6px;
+           -moz-border-radius: 0 0 6px 6px;
+                border-radius: 0 0 6px 6px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+                box-shadow: 0 1px 2px rgba(0,0,0,.15);
+      }
 
-	<!-- Favicons
-	================================================== -->
-	<link rel="shortcut icon" href="images/favicon.ico">
-	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+      .page-header {
+        background-color: #f5f5f5;
+        padding: 20px 20px 10px;
+        margin: -20px -20px 20px;
+      }
+    </style>
+  </head>
 
-</head>
-<body>
-	<div class="container">
-		<div class="sixteen columns">
-			<h1 class="remove-bottom" style="margin-top: 40px">AkR</h1>
-			<h5>Random ideas and possibly some code and eventually a portfolio.</h5>
-			<hr />
-		</div>
-		<div class="sixteen columns clearfix">
-			<div class="eight columns alpha">
-				<h3>About me.</h3>
-				<p>I like to code.</p>
-				<p>I work on lots of small projects and try out random ideas.</p>
-				<p>I am fascinated by computer science and am constantly amazed by the ingenuity and efficiency of the Boyer-Moore string search algorithm.</p>
-			</div>
-			<div class="eight columns omega">
+  <body>
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <a class="brand" href="#">Akshay K Ramkumar</a>
+          <ul class="nav">
+            <li class="active"><a href="#">Blog</a></li>
+            <li ><a href="http://github.com/akshaykarthik">
+               Github
+            </a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-				<h3>What I'm Learning/Messing around with</h3>
-				<div class="row">
-					<div class="four columns alpha">
-				
-					<h5>Languages</h5>
-					<ul class="square">
-					<li>C#/WPF</li>
-					<li>Python</li>
-					<li>Javascript/node.js</li>
-					<li>Javascript/jquery</li>
-					</ul>
-					</div>
-					<div class="four columns omega">
-					<h5>Algorithms and Datastructures</h5>
-					<ul class="square">
-					<li>Markov Chains</li>
-					<li>Bloom Filters</li>
-					<li>Naive Bayes Classifiers</li>
-					</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<h3>Current projects</h3>
-		<div class="sixteen columns clearfix">
-			<div class="four columns alpha">
-				<h4><a href="http://github.com/akshaykarthik/distribute">Distribute</a><h4></br>
-			</div>
-			<div class="four columns">
-				<h4><a href="http://github.com/akshaykarthik/node-metrics">Node-Metrics</a><h4></br>
-			</div>
-			<div class="four columns">
-				<h4>Excercises from Introduction to Algorithms (in coffeescript)<h4></br>
-			</div>
-			<div class="four columns omega">
-				<h4><h4></br>
-			</div>
-		</div>
-	</div>
-	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
-	<script src="javascripts/tabs.js"></script>
-</body>
+    <div class="container">
+      <div class="content">
+        <div class="page-header">
+          <h1>AkR-isms</h1>
+        </div>
+        <div class="row">
+          <div class="span10">
+            <div id="about">
+                <h3> About Me </h3>
+                <p>Hi!</p>
+                <p>My name is Akshay. I love to code.</p>
+            </div>
+            <div id="projects">
+                <h3>Some of the projects I'm working on are:</h3>
+                <dl>
+                    <dt><a href="github.com/akshaykarthik/distribute">Distribute</a></dt>
+                    <dd> 
+                        <p>- A way to <small>"</small>Distribute<small>"</small> node.js applications across multiple computers</p>
+                        <p>Current status : <span class="label important">Not working</span></p>
+                    </dd>
+                    
+                    <dt><a href="github.com/akshaykarthik/node-metrics">Node-<em>Metrics</em></a></dt>
+                    <dd>
+                        <p>- A node.js based telemetry system</p>
+                        <p>Current status : <span class="label important">Not working</span></p>
+                    </dd>
+                </dl>
+            </div>
+          </div>
+          <div class="span4">
+            
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <p>&copy; Akshay K R 2011</p>
+        <p>Created with the use of <a href="http://twitter.github.com/bootstrap">Twitter Bootstrap</p>
+      </footer>
+
+    </div>
+  </body>
 </html>
