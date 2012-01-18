@@ -1,0 +1,82 @@
+<!DOCTYPE html>  <html> <head>   <title>sort.coffee</title>   <meta http-equiv="content-type" content="text/html; charset=UTF-8">   <link rel="stylesheet" media="all" href="docco.css" /> </head> <body>   <div id="container">     <div id="background"></div>          <table cellpadding="0" cellspacing="0">       <thead>         <tr>           <th class="docs">             <h1>               sort.coffee             </h1>           </th>           <th class="code">           </th>         </tr>       </thead>       <tbody>                               <tr id="section-1">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-1">&#182;</a>               </div>               <h3>Selection Sort</h3>
+
+<dl>
+<dt>Best Case</dt>
+<dd><code>O(n^2)</code></dd>
+<dt>Worst Case</dt>
+<dd><code>O(n^2)</code></dd>
+</dl>
+
+<p>Of all the sorts, selection sort is probably the easiest to understand.  </p>
+
+<p>The algorithm works by first, going through all elements of the array
+and finding the minimum, then switching it with the element at its correct
+position. Then repeating through all the elements.</p>
+
+<p>This sort can also be done by finding the maximum and moving it to the end of
+the array.</p>
+
+<p>This sort is incredibly inneficient as each element is swapped at least once.</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="nv">selection_sort = </span><span class="nf">( array )-&gt;</span>
+	<span class="k">for</span> <span class="nx">index</span> <span class="k">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">...</span><span class="nx">array</span><span class="p">.</span><span class="nx">length</span><span class="p">]</span>
+		<span class="nv">min = </span><span class="nx">array</span><span class="p">[</span> <span class="nx">index</span> <span class="p">]</span>
+		<span class="nv">minIndex = </span><span class="nx">index</span>
+		<span class="k">for</span> <span class="nx">j</span> <span class="k">in</span> <span class="p">[</span><span class="nx">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">...</span><span class="nx">array</span><span class="p">.</span><span class="nx">leng</span><span class="p">]</span>
+		  <span class="k">if</span> <span class="nx">array</span><span class="p">[</span> <span class="nx">j</span> <span class="p">]</span> <span class="o">&lt;</span> <span class="nx">min</span>
+		  	<span class="nv">minIndex = </span><span class="nx">j</span>
+		  	<span class="nv">min = </span><span class="nx">array</span><span class="p">[</span> <span class="nx">j</span> <span class="p">]</span>
+		 
+		 <span class="k">if</span><span class="p">(</span><span class="nx">min</span> <span class="o">&lt;</span> <span class="nx">nums</span><span class="p">[</span> <span class="nx">index</span> <span class="p">])</span>
+		 	<span class="nv">temp = </span><span class="nx">nums</span><span class="p">[</span> <span class="nx">index</span> <span class="p">]</span>
+		 	<span class="nx">nums</span><span class="p">[</span> <span class="nx">index</span> <span class="p">]</span> <span class="o">=</span> <span class="nx">min</span>
+		 	<span class="nx">nums</span><span class="p">[</span> <span class="nx">minIndex</span> <span class="p">]</span> <span class="o">=</span> <span class="nx">temp</span></pre></div>             </td>           </tr>                               <tr id="section-2">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-2">&#182;</a>               </div>               <h3>Insertion Sort</h3>
+
+<dl>
+<dt>Best Case</dt>
+<dd><code>O(n)</code></dd>
+<dt>Worst Case</dt>
+<dd><code>O(n^2)</code></dd>
+</dl>
+
+<p>Insertion sort works by going through each elements in the array and moving them
+to the right location.</p>
+
+<p>This is done by taking each element and swapping with the elements to the left
+of it until it is in the correct position.</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="nv">insertion_sort = </span><span class="nf">( array )-&gt;</span>	
+	<span class="k">for</span> <span class="nx">i</span> <span class="k">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">...</span><span class="nx">array</span><span class="p">.</span><span class="nx">length</span><span class="p">]</span>
+		<span class="nv">key = </span><span class="nx">array</span><span class="p">[</span> <span class="nx">i</span> <span class="p">]</span>
+		<span class="nv">j = </span><span class="nx">i</span> <span class="o">-</span> <span class="mi">1</span>
+		<span class="k">while</span><span class="p">(</span> <span class="nx">j</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">and</span> <span class="nx">array</span><span class="p">[</span> <span class="nx">j</span> <span class="p">]</span> <span class="o">&gt;</span> <span class="nx">key</span> <span class="p">)</span>
+			<span class="nx">array</span><span class="p">[</span> <span class="nx">j</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">]</span> <span class="o">=</span> <span class="nx">array</span><span class="p">[</span> <span class="nx">j</span> <span class="p">]</span>
+			<span class="nv">j = </span><span class="nx">j</span> <span class="o">-</span> <span class="mi">1</span>
+		<span class="nx">array</span><span class="p">[</span> <span class="nx">j</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">]</span> <span class="o">=</span> <span class="nx">key</span>
+	<span class="k">return</span> <span class="nx">array</span></pre></div>             </td>           </tr>                               <tr id="section-3">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-3">&#182;</a>               </div>               <h3>Merge Sort</h3>
+
+<dl>
+<dt>Best Case</dt>
+<dd><code>O(n)</code></dd>
+<dt>Worst Case</dt>
+<dd><code>O(n^2)</code></dd>
+</dl>             </td>             <td class="code">               <div class="highlight"><pre><span class="nv">merge_sort = </span><span class="nf">( array, lb = 0, ub = array.length ) -&gt;</span>
+	<span class="k">if</span> <span class="nx">lb</span> <span class="o">&gt;=</span> <span class="nx">ub</span>
+		<span class="k">return</span>
+	
+	<span class="nv">mid = </span><span class="p">(</span><span class="nx">lb</span> <span class="o">+</span> <span class="nx">ub</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+	<span class="nx">merge_sort</span><span class="p">(</span> <span class="nx">array</span><span class="p">,</span> <span class="nx">lb</span><span class="p">,</span> <span class="nx">mid</span> <span class="p">)</span>
+	<span class="nx">merge_sort</span><span class="p">(</span> <span class="nx">array</span><span class="p">,</span> <span class="nx">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">ub</span> <span class="p">)</span>
+
+	<span class="nv">low_wall = </span><span class="nx">mid</span>
+	<span class="nv">high_cursor = </span><span class="nx">mid</span> <span class="o">+</span> <span class="mi">1</span>
+
+	<span class="k">while</span><span class="p">(</span> <span class="nx">low</span> <span class="o">&lt;</span> <span class="nx">low_wall</span> <span class="o">and</span> <span class="nx">high_cursor</span> <span class="o">&lt;=</span> <span class="nx">ub</span> <span class="p">)</span>
+		<span class="k">if</span><span class="p">(</span> <span class="nx">array</span><span class="p">[</span> <span class="nx">low</span> <span class="p">]</span> <span class="o">&lt;</span> <span class="nx">array</span><span class="p">[</span> <span class="nx">high_cursor</span> <span class="p">])</span>
+			<span class="nx">low</span><span class="o">++</span>
+		<span class="k">else</span>
+			<span class="nv">temp = </span><span class="nx">array</span><span class="p">[</span> <span class="nx">high_cursor</span> <span class="p">]</span>
+			<span class="k">for</span> <span class="nx">k</span> <span class="k">in</span> <span class="p">[</span><span class="nx">high_cursor</span> <span class="o">-</span> <span class="mi">1</span><span class="p">...</span><span class="nx">low</span><span class="p">]</span> <span class="k">by</span> <span class="o">-</span><span class="mi">1</span>
+				<span class="nx">array</span><span class="p">[</span> <span class="nx">k</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">]</span> <span class="o">=</span> <span class="nx">array</span><span class="p">[</span> <span class="nx">k</span> <span class="p">]</span>
+			<span class="nx">array</span><span class="p">[</span> <span class="nx">low</span> <span class="p">]</span> <span class="o">=</span> <span class="nx">temp</span>
+			<span class="nx">low</span><span class="o">++</span>
+			<span class="nx">low_wall</span><span class="o">++</span>
+			<span class="nx">high_cursor</span><span class="o">++</span>
+
+</pre></div>             </td>           </tr>                </tbody>     </table>   </div> </body> </html> 
